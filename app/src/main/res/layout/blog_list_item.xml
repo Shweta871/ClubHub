@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="6dp"
+        android:id="@+id/main_blog_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/username"
+                android:id="@+id/blog_user_image"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                />
+        <TextView
+            android:id="@+id/blog_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@id/blog_user_image"
+            android:layout_toRightOf="@id/blog_user_image"
+            />
+            <TextView
+                android:id="@+id/blog_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blog Post Date"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/blog_user_image"
+                android:layout_below="@id/blog_user_name"
+                android:layout_toRightOf="@id/blog_user_image"
+                android:layout_marginLeft="8dp" />
+
+
+            <ImageView
+                android:id="@+id/blog_post_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@id/blog_date"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="23dp"
+                android:src="@drawable/square"/>
+
+            <TextView
+                android:id="@+id/blog_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/blog_post_image"
+                android:text="Description"
+                android:textColor="#1b1b1b"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/blog_desc"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_star_border_black_24dp"
+                />
+
+
+            <TextView
+                android:id="@+id/interested_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/blog_desc"
+                android:layout_toRightOf="@id/star"
+                android:text="Interested ?"
+                android:textSize="16sp"
+                android:textColor="#1b1b1b"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="6dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
